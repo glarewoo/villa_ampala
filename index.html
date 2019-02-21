@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web_Template</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Baskerville|Raleway:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="overlay"></div>
+        <div class="hide_content">
+            <a href="#">About Us<div class="underline"></div></a>
+            <a href="#">Our Rooms<div class="underline"></div></a>
+            <a href="#">Blog<div class="underline"></div></a>
+            <a href="#">Contact US<div class="underline"></div></a>
+            <div class="hide_sns">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+            </div>
+            <button class="hide_btn" onclick="CloseMenu()">
+                <i class="far fa-times-circle"></i>
+            </button>
+
+        </div>
+        <nav>
+            <div class="logo">Villa Ampala</div>
+            <div class="nav_menu">
+                <a href="#">About Us<div class="underline"></div></a>
+                <a href="#">Our Rooms<div class="underline"></div></a>
+                <a href="#">Blog<div class="underline"></div></a>
+                <a href="#">Contact Us<div class="underline"></div></a>
+            </div>
+            <button class="hide_menu" onclick="OpenMenu()">
+                <i class="fas fa-align-justify"></i>
+            </button>
+        </nav>
+
+        <!--logo & menu-->
+        <article>
+            <h1>Villa Ampala</h1>
+            <div class="underline_01"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatem accusantium incidunt ratione
+                modi nisi fugiat, odio hic mollitia vero debitis perspiciatis omnis obcaecati commodi cupiditate
+                expedita ipsa maiores fuga.</p>
+        </article>
+        <div class="reservation">
+            <form action="#">
+                <div class="checkbox">
+                    <label for="in">check in</label>
+                    <input type="date" id="in" />
+                </div>
+                <div class="checkbox">
+                    <label for="out">check out</label>
+                    <input type="date" id="out" />
+                </div>
+                <input type="submit" value="search" class="sub_btn">
+            </form>
+        </div>
+        <button class="down_btn" onclick="ScrollDown()">
+            <div><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="my_sns">
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <div></div>
+        </div>
+        <button class="scroll_top_btn" onclick="ScrollTop()">
+            <div><i class="fas fa-arrow-up"></i></div>
+        </button>
+
+    </header>
+    <section>
+        <svg id="curve" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 163.67">
+            <path class="cls-1" d="M1921,62.67s-427-141-960,0-960,0-960,0v101H1921Z" transform="translate(-1 0)" />
+        </svg>
+        <!--about us-->
+        <div class="sec_01 about">
+            <h2>little about us<div class="underline_01"></div>
+            </h2>
+            <div class="info_deco info_01">
+                <p>tel : (01) 1234 5678</p>
+            </div>
+            <div class="sec_box">
+                <div class="sec_img">
+                    <img>
+                    <img>
+                </div>
+                <div class="sec_content">
+                    <h3><i class="fas fa-quote-left"></i>
+                        for your peaceful vacations
+                        <i class="fas fa-quote-right"></i>
+                    </h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nisi voluptate itaque nesciunt
+                        consequatur. Iste hic labore, accusamus ipsa numquam minus doloribus voluptatum error nesciunt
+                        minima ratione vero eos illo libero? Expedita alias placeat libero ratione dolores, deserunt
+                        earum enim odit ad unde ex voluptas nemo harum repellat cupiditate nobis autem exercitationem
+                        cum officiis! Veniam ex sint cum quod ea natus maiores atque dolor recusandae corrupti sed rem,
+                        iure minima culpa laudantium fugiat fugit perspiciatis? Possimus deleniti perferendis eveniet
+                        distinctio qui placeat fugit fugiat! Ea dolorem harum reiciendis aliquam id reprehenderit
+                        placeat quibusdam, tempora voluptatibus animi velit fugit, autem exercitationem.
+                    </p>
+                </div>
+            </div>
+            <div class="info_deco info_02">
+                <p>info@villampala.co</p>
+            </div>
+        </div>
+        <!--our rooms-->
+        <div class="sec_01 facil">
+            <h2>facilities<div class="underline_01"></div>
+            </h2>
+            <div class="sec_box">
+                <div class="sec_content">
+                    <h3>serve free breakfast</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Voluptas inventore corporis voluptatibus, aspernatur explicabo, 
+                        reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
+                         pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
+                          Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus 
+                          sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
+                    </p>
+                </div>
+                <div class="sec_img">
+                    <div class="sec_pic sec_pic_01"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sec_box">
+                <div class="sec_img"><div class="sec_pic sec_pic_02"></div></div>
+                <div class="sec_content">
+                    <h3>swimming pool</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Voluptas inventore corporis voluptatibus, aspernatur explicabo, 
+                        reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
+                         pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
+                          Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus 
+                          sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
+                    </p>
+                </div>
+                
+            </div>
+            <div class="sec_box">
+                    <div class="sec_content">
+                        <h3>golf course</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Voluptas inventore corporis voluptatibus, aspernatur explicabo, 
+                            reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
+                             pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
+                              Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus 
+                              sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
+                        </p>
+                    </div>
+                    <div class="sec_img"><div class="sec_pic sec_pic_03"></div></div>
+                </div>
+    </section>
+    <footer></footer>
+    <!--jQuery & javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

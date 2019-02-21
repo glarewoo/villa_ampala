@@ -1,0 +1,506 @@
+/*
+<color>
+1) cornflowerblue
+2)royalblue
+3)darksalmon
+
+<font>
+font-family: 'Abril Fatface', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Raleway', sans-serif;
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.5s;
+  border: none;
+}
+
+/*animation*/
+.slide_up {
+  animation: slide_up 1s forwards;
+}
+
+@keyframes slide_up {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*header*/
+header {
+  height: 100vh;
+  background: cornflowerblue url("../img/main.jpg");
+  background-size: 100%;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 191, 255, 0.7),
+    rgba(65, 105, 225, 0.95)
+  );
+}
+
+header > nav {
+  position: relative;
+  width: 80%;
+  height: 160px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Abril Fatface", cursive;
+  font-size: 30px;
+}
+
+.nav_menu > a {
+  cursor: pointer;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  float: left;
+  margin-right: 20px;
+}
+
+.nav_menu > a:nth-of-type(4) {
+  margin-right: 0;
+}
+
+.nav_menu > a:hover > .underline {
+  width: 100%;
+}
+
+.underline {
+  width: 0px;
+  height: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+/*hide menu bar*/
+.hide_menu {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.hide_menu > i {
+  color: #fff;
+  font-size: 24px;
+  display: block;
+}
+
+.hide_content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 191, 255, 0.9),
+    rgba(65, 105, 225, 0.95)
+  );
+  z-index: 100;
+  padding: 200px 50px 200px 50px;
+}
+
+.hide_content > a {
+  cursor: pointer;
+  color: #fff;
+  display: block;
+
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.hide_content > a:hover {
+  color: salmon;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.hide_sns {
+  position: absolute;
+  bottom: 150px;
+  left: 50px;
+  font-size: 20px;
+}
+
+.hide_sns > a {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.hide_btn {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  font-size: 20px;
+  color: #fff;
+  background: none;
+  cursor: pointer;
+}
+/*main article*/
+header > article {
+  position: relative;
+  width: 1000px;
+  height: 300px;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+header > article > h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 92px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.underline_01 {
+  height: 4px;
+  background: #fff;
+  margin: 10px 450px 30px 450px;
+}
+
+header > article > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 32px;
+}
+
+.reservation {
+  position: relative;
+  width: 1000px;
+  height: 100px;
+  background: #fff;
+  margin: auto;
+  top: 72px;
+  border-radius: 50px;
+}
+
+.reservation > form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.checkbox {
+  display: block;
+  width: 30%;
+  margin: 0 0 0 5%;
+  font-family: "Raleway", sans-serif;
+}
+
+.checkbox > div {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+label {
+  color: black;
+}
+
+.checkbox input {
+  width: 100%;
+  height: 40px;
+  background: rgb(224, 224, 224);
+  border: none;
+  color: darkgrey;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  padding-left: 10px;
+  font-weight: 100;
+}
+
+.sub_btn {
+  width: 20%;
+  height: 60px;
+  margin: 0 5% 0 5%;
+  border: none;
+  background-image: linear-gradient(to right, salmon, cornflowerblue);
+  background-size: 200%;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+  font-family: "Raleway", sans-serif;
+}
+
+.sub_btn:hover {
+  background-position: right;
+}
+
+.down_btn {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lavender;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 100;
+  background: none;
+  cursor: pointer;
+}
+
+.down_btn > div {
+  background: linear-gradient(to bottom right, salmon, cornflowerblue);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.329);
+}
+
+.down_btn i {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  animation: down 1.5s infinite;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(16px);
+    opacity: 1;
+  }
+}
+
+.my_sns {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  transform: rotate(-90deg);
+  transform-origin: right;
+}
+
+.my_sns > a {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.my_sns > div {
+  width: 150px;
+  height: 1px;
+  background: #fff;
+  float: right;
+  transform: translateY(8px);
+}
+/*scroll top button*/
+.scroll_top_btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: none;
+  background: rgba(100, 148, 237, 0.541);
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  z-index: 101;
+  padding: 10px;
+  display: none;
+  opacity: 0;
+}
+
+.scroll_top_btn > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.scroll_top_btn > div > i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 50px;
+}
+
+/*section*/
+section {
+  background: whitesmoke;
+  position: relative;
+}
+#curve {
+  position: absolute;
+  top: 0;
+  transform: translateY(-99%);
+  width: 100%;
+}
+
+#curve path {
+  fill: whitesmoke;
+}
+
+.sec_01 {
+  position: relative;
+  display: flex;
+  padding-top: 320px;
+}
+
+.sec_01 > h2 {
+  width: 100%;
+  position: absolute;
+  top: 160px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.sec_01 .underline_01 {
+  background: darkslategray;
+  margin: 10px 48% 30px 48%;
+}
+
+.info_deco {
+  position: relative;
+  width: 10%;
+}
+
+.info_01 > p {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-90deg);
+  transform-origin: center;
+  color: darkslategrey;
+}
+.info_02 > p {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(90deg);
+  transform-origin: center;
+  color: darkslategrey;
+}
+
+.sec_box {
+  width: 80%;
+  height: 800px;
+  display: flex;
+}
+
+.sec_img {
+  width: 50%;
+  position: relative;
+}
+
+.sec_img > img {
+  width: 440px;
+  height: 560px;
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
+  border: none;
+  background-image: url("../img/room1.jpg");
+  background-size: auto 100%;
+}
+
+.sec_img > img:nth-of-type(2) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/room2.jpg");
+}
+
+.sec_content {
+  width: 50%;
+  padding-left: 100px;
+}
+
+.sec_content > h3 > i {
+  font-size: 24px;
+}
+.sec_content > h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 44px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sec_content > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+/*our rooms*/
+.sec_01:nth-of-type(2) > .sec_box {
+  transform: translateX(25%);
+}
+
+.sec_01:nth-of-type(2) > .sec_box > .sec_content {
+  width: 50%;
+  padding-right: 100px;
+  padding-left: 0px;
+}
+
+.sec_pic {
+  background: royalblue;
+  width: 100%;
+  height: 400px;
+}
+
+.sec_pic_01 {
+  border-radius: 300px 0 0 0;
+}
+.sec_pic_02 {
+  border-radius: 0 300px 0 0;
+}
+.sec_pic_03 {
+  border-radius: 300px 0 0 0;
+}
+.sec_box:nth-of-type(4) {
+  transform: translateX(25%);
+}
+
+.sec_box:nth-of-type(4) > .sec_content > h3 {
+  text-align: initial;
+}
+.sec_box:nth-of-type(4) > .sec_content {
+  width: 50%;
+  padding-right: 100px;
+  padding-left: 0px;
+}
+.sec_01:nth-of-type(4) > .sec_box > .sec_content > h3 {
+  text-align: initial;
+}
+
+/*footer*/
+footer {
+  background: royalblue;
+  height: 20vh;
+}
