@@ -13,13 +13,13 @@ for (i = 0; i < Img.length; i++) {
   Img[i].classList.add(".slide_up");
 }
 
-var HideMenu = document.getElementsByClassName("hide_content")[0];
+var hide_menu = document.getElementsByClassName("hide_content")[0];
 function OpenMenu() {
-  HideMenu.style.display = "block";
+  hide_menu.style.display = "block";
 }
 
 function CloseMenu() {
-  HideMenu.style.display = "none";
+  hide_menu.style.display = "none";
 }
 var Header = document.getElementsByTagName("header")[0];
 
