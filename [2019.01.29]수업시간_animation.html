@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation</title>
+    <style>
+        /*animation
+        :특정 조건이 되면 알아서 동작하는 것
+        @keyframe
+        : 애니메이션 사용시 필수로 필요한 것. 
+          프레임의 개수가 많을수록 부드러운 애니메이션 구현 가능
+          재사용이 가능하다. 
+        <syntax>
+            @keyframe 이름{
+                0%{}
+                100%{}
+                -------------
+                from{}
+                to{}
+            }
+
+        -애니메이션 적용하는 방법
+            1) keyframes를 만든다.
+            2)애니메이션 적용시킬 요소에 animation 속성들을 적용한다
+
+        -animation 속성(아래 두가지는 필수조건)
+            1) animation-name: 애니메이션 이름
+            2)animation-duration: 애니메이션 지속시간
+            3)animation-timing-function: 애니메이션 속도 > linear, ease-in, ease-out, ease-in-out
+            4)animation-delay: 최초의 에니메이션 실행되기 전에 부여한 시간만큼 지연시킨다.
+            5)animation-iteration-count: 애니메이션의 반복횟수를 정한다 > 정수/ infinite 값을 준다.
+            6)animation-direction: 애니메이션의 방향성 > default:normal ,alternate: 100%까지 갔다가     돌아감.
+            7)animation-fill-mode: 애니메이션을 100%지점에서 멈춤 > iterate-count와 같이 쓸 수 없음
+            8)animation:syntax(name duration timing-function delay iteration-count direction fill-mode)
+        
+            -복수의 @keyframes를 적용하고 싶을 때
+            animation-property: value01-1 value-2, value02-1 value02-2;
+        */
+
+        .move {
+            width: 100px;
+            height: 100px;
+            background: plum;
+            animation: color_change 1s infinite, pos 4s infinite;
+            animation: thr duration timing-function delay iteration-count direction fill-mode;
+
+        }
+
+
+
+        @keyframes color_change {
+            0% {
+                background: coral;
+
+            }
+            20% {
+                background: aliceblue;
+
+            }
+            40% {
+                background: purple;
+
+            }
+            60% {
+                background: lightblue;
+
+            }
+            80% {
+                background: orchid;
+
+            }
+            100% {
+                background: orchid;
+
+            }
+        }
+
+        @keyframes pos {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            10% {
+                transform: translate(200px, 0px);
+            }
+            20% {
+                transform: translate(200px, 200px);
+            }
+            30% {
+                transform: translate(0px, 200px);
+            }
+            40% {
+                transform: translate(0px, 0px);
+            }
+            60% {
+                transform: translate(200px, 200px);
+            }
+            61% {
+                transform: translate(200px, 0px);
+            }
+            80% {
+                transform: translate(0px, 200px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+
+        }
+
+        .rotate {
+            position: absolute;
+            left: 500px;
+            width: 100px;
+            height: 100px;
+            background: plum;
+            animation: color_change 2s infinite, rotation 3s infinite;
+        }
+
+        /*rotate 다시 한번 만들어 볼 것*/
+
+        @keyframes rotation {
+            0% {
+                transform: rotateX(0) perspective(400px);
+            }
+            50% {
+                transform: rotateX(-180deg) perspective(400px);
+            }
+            100% {
+                transform: rotateX(-180deg) rotateY(180deg) perspective(400px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="move"></div>
+    <div class="rotate"></div>
+
+    <div class="bar"></div>
+
+</body>
+
+</html>

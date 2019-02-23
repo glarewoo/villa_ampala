@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        /*element style*/
+      input[type = button]{
+          width: 100px;
+          height: 30px;
+          background: royalblue;
+          border: none;
+          color: #fff;
+          margin: 0 0 10px 0;
+      }  
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background: cornflowerblue;
+        opacity: 0;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background: darksalmon;
+        position: relative;
+        left: 100px;
+        opacity: 0;
+      }
+      /*slide up 하기*/
+      .move_up {
+        animation: myanimation 2s forwards;
+      }
+
+      @keyframes myanimation {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="slide up" onclick="Delay(BoxArray)">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <script>
+      var Box1 = document.getElementsByClassName("box1")[0];
+      var Box2 = document.getElementsByClassName("box2")[0];
+
+      var BoxArray = [Box1, Box2];
+      function Delay(list) {
+        var Delay_Time = 0;
+        for (var a in list) {
+          setTimeout(SlideUp, Delay_Time, list[a]);
+          Delay_Time += 500;
+        }
+      }
+
+      function SlideUp(target) {
+        target.classList.add("move_up");
+      }
+    </script>
+  </body>
+</html>

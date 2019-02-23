@@ -1,18 +1,26 @@
-/*var slide_up_class =  document.getElementsByClassName("slide_up")[0];
-var article = document.getElementsByTagName("article");
-var slide_up_arr = [article];
+/*element to slide up*/
+var article = document.getElementsByTagName("article")[0];
+var reservation = document.getElementsByClassName("reservation")[0];
+var delay_list = [
+  document.getElementsByTagName("article")[0],
+  document.getElementsByClassName("reservation")[0]
+]
 
-
-for(i =0; i< slide_up_arr.length; i++){
-    article.classList.add("slide_up_class");
-}*/
-
-var Img = document.getElementsByTagName("img");
-
-for (i = 0; i < Img.length; i++) {
-  Img[i].classList.add(".slide_up");
+function delay(list){
+  var delay_time = 1000;
+  for(var a in list){
+    setTimeout(SlideUp ,delay_time, list[a] );
+    delay_time += 500;
+  } 
 }
 
+function SlideUp (target){
+  target.classList.add("slide_up");  
+};
+delay(delay_list);
+
+
+/*hidden navigation*/
 var hide_menu = document.getElementsByClassName("hide_content")[0];
 function OpenMenu() {
   hide_menu.style.display = "block";
