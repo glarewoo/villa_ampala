@@ -7,28 +7,22 @@
     <title>Document</title>
     <style>
       /*element style*/
-      input[type="button"] {
-        width: 100px;
-        height: 30px;
-        background: royalblue;
-        border: none;
-        color: #fff;
-        margin: 0 0 10px 0;
-      }
-      .box1 {
+
+      .box {
         width: 100px;
         height: 100px;
         background: cornflowerblue;
         opacity: 0;
+        margin-bottom: 4px;
       }
-      .box2 {
+      .box1 {
         width: 100px;
         height: 100px;
-        background: darksalmon;
-        position: relative;
-        left: 100px;
+        background: red;
         opacity: 0;
+        margin-bottom: 4px;
       }
+
       /*slide up 하기*/
       .move_up {
         animation: myanimation 2s forwards;
@@ -48,18 +42,28 @@
     </style>
   </head>
   <body>
-    <input type="button" value="slide up" onclick="Delay(BoxArray)" />
-    <div class="box1"></div>
-    <div class="box2"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
     <script>
-      var Box1 = document.getElementsByClassName("box1")[0];
-      var Box2 = document.getElementsByClassName("box2")[0];
+      var Box = document.getElementsByClassName("box");
 
-      var BoxArray = [Box1, Box2];
       function Delay(list) {
         var Delay_Time = 0;
         for (var a in list) {
-          setTimeout(SlideUp, Delay_Time, list[a]);
+          setTimeout(SlideUp, Delay_Time, Box[a]);
           Delay_Time += 500;
         }
       }
@@ -67,6 +71,8 @@
       function SlideUp(target) {
         target.classList.add("move_up");
       }
+
+      Delay(Box);
     </script>
   </body>
 </html>

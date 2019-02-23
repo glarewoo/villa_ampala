@@ -334,7 +334,6 @@ label {
   border-radius: 10px;
   z-index: 101;
   padding: 10px;
-  display: none;
   opacity: 0;
   cursor: pointer;
 }

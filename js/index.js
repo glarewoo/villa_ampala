@@ -4,21 +4,20 @@ var reservation = document.getElementsByClassName("reservation")[0];
 var delay_list = [
   document.getElementsByTagName("article")[0],
   document.getElementsByClassName("reservation")[0]
-]
+];
 
-function delay(list){
+function delay(list) {
   var delay_time = 1000;
-  for(var a in list){
-    setTimeout(SlideUp ,delay_time, list[a] );
+  for (var a in list) {
+    setTimeout(SlideUp, delay_time, list[a]);
     delay_time += 500;
-  } 
+  }
 }
 
-function SlideUp (target){
-  target.classList.add("slide_up");  
-};
+function SlideUp(target) {
+  target.classList.add("slide_up");
+}
 delay(delay_list);
-
 
 /*hidden navigation*/
 var hide_menu = document.getElementsByClassName("hide_content")[0];
@@ -46,10 +45,8 @@ var ScrollTop_Btn = document.getElementsByClassName("scroll_top_btn")[0];
 
 function Show(needle) {
   if (window.scrollY > 0) {
-    needle.style.display = "block";
     needle.style.opacity = "1";
   } else {
-    needle.style.display = "none";
     needle.style.opacity = "0";
   }
 }
