@@ -19,9 +19,9 @@ font-family: 'Raleway', sans-serif;
   border: none;
 }
 
-/*animation*/
+/*animation slide up*/
 .slide_up {
-  animation: slide_up 2s forwards;
+  animation: slide_up 1s forwards;
 }
 
 @keyframes slide_up {
@@ -29,6 +29,24 @@ font-family: 'Raleway', sans-serif;
     transform: translateY(20px);
     opacity: 0;
   }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*animation slide down*/
+.slide_down {
+  animation: slide_down 1s forwards;
+}
+
+@keyframes slide_down {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -49,14 +67,12 @@ header {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-    to bottom right,
+  background-image: linear-gradient(to bottom right,
     rgba(0, 191, 255, 0.7),
-    rgba(65, 105, 225, 0.95)
-  );
+    rgba(65, 105, 225, 0.95));
 }
 
-header > nav {
+header>nav {
   position: relative;
   width: 80%;
   height: 160px;
@@ -71,19 +87,20 @@ header > nav {
   font-size: 30px;
 }
 
-.nav_menu > a {
+.nav_menu>a {
   cursor: pointer;
   color: #fff;
   font-family: "Raleway", sans-serif;
   float: left;
   margin-right: 20px;
+  opacity: 0;
 }
 
-.nav_menu > a:nth-of-type(4) {
+.nav_menu>a:nth-of-type(4) {
   margin-right: 0;
 }
 
-.nav_menu > a:hover > .underline {
+.nav_menu>a:hover>.underline {
   width: 100%;
 }
 
@@ -101,7 +118,7 @@ header > nav {
   border: none;
 }
 
-.hide_menu > i {
+.hide_menu>i {
   color: #fff;
   font-size: 24px;
   display: block;
@@ -112,16 +129,14 @@ header > nav {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-    to bottom right,
+  background-image: linear-gradient(to bottom right,
     rgba(0, 191, 255, 0.9),
-    rgba(65, 105, 225, 0.95)
-  );
+    rgba(65, 105, 225, 0.95));
   z-index: 1000;
   padding: 200px 50px 200px 50px;
 }
 
-.hide_content > a {
+.hide_content>a {
   cursor: pointer;
   color: #fff;
   display: block;
@@ -131,7 +146,7 @@ header > nav {
   margin-bottom: 50px;
 }
 
-.hide_content > a:hover {
+.hide_content>a:hover {
   color: salmon;
   font-size: 28px;
   font-weight: bold;
@@ -144,7 +159,7 @@ header > nav {
   font-size: 20px;
 }
 
-.hide_sns > a {
+.hide_sns>a {
   color: #fff;
   margin-right: 10px;
 }
@@ -160,7 +175,7 @@ header > nav {
 }
 
 /*main article*/
-header > article {
+header>article {
   position: relative;
   width: 1000px;
   height: 300px;
@@ -170,7 +185,7 @@ header > article {
   opacity: 0;
 }
 
-header > article > h1 {
+header>article>h1 {
   font-family: "Abril Fatface", cursive;
   font-size: 92px;
   font-weight: 100;
@@ -184,7 +199,7 @@ header > article > h1 {
   margin: 10px 450px 30px 450px;
 }
 
-header > article > p {
+header>article>p {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 100;
@@ -202,7 +217,7 @@ header > article > p {
   opacity: 0;
 }
 
-.reservation > form {
+.reservation>form {
   width: 100%;
   height: 100%;
   display: flex;
@@ -217,7 +232,7 @@ header > article > p {
   font-family: "Raleway", sans-serif;
 }
 
-.checkbox > div {
+.checkbox>div {
   margin-top: 20px;
   margin-bottom: 4px;
 }
@@ -272,7 +287,7 @@ label {
   cursor: pointer;
 }
 
-.down_btn > div {
+.down_btn>div {
   background: linear-gradient(to bottom right, salmon, cornflowerblue);
   border-radius: 50%;
   width: 100%;
@@ -308,20 +323,21 @@ label {
   transform-origin: right;
 }
 
-.my_sns > a {
+.my_sns>a {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   margin-right: 20px;
 }
 
-.my_sns > div {
+.my_sns>div {
   width: 150px;
   height: 1px;
   background: #fff;
   float: right;
   transform: translateY(8px);
 }
+
 /*scroll top button*/
 .scroll_top_btn {
   position: fixed;
@@ -338,14 +354,14 @@ label {
   cursor: pointer;
 }
 
-.scroll_top_btn > div {
+.scroll_top_btn>div {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   border: 1px solid #fff;
 }
 
-.scroll_top_btn > div > i {
+.scroll_top_btn>div>i {
   font-size: 24px;
   color: #fff;
   line-height: 50px;
@@ -356,6 +372,8 @@ section {
   background: whitesmoke;
   position: relative;
 }
+
+/*section curved svg*/
 #curve {
   position: absolute;
   top: 0;
@@ -373,7 +391,7 @@ section {
   padding-top: 320px;
 }
 
-.sec_01 > h2 {
+.sec_01>h2 {
   width: 100%;
   position: absolute;
   top: 160px;
@@ -381,27 +399,18 @@ section {
   text-align: center;
 }
 
-.sec_01 .underline_01 {
+.underline_02 {
   background: darkslategray;
   margin: 10px 48% 30px 48%;
+  height: 4px;
 }
 
-.info_deco {
+.info {
   position: relative;
   width: 10%;
 }
 
-.info_01 > p {
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  transform: rotate(-90deg);
-  transform-origin: center;
-  color: darkslategrey;
-}
-.info_02 > p {
+.info>p {
   width: 100%;
   position: absolute;
   text-align: center;
@@ -409,33 +418,35 @@ section {
   transform: translateY(-50%);
   transform: rotate(90deg);
   transform-origin: center;
-  color: darkslategrey;
+  color: darkgrey;
 }
 
 .sec_box {
   width: 80%;
-  height: 800px;
+  margin-bottom: 100px;
   display: flex;
 }
 
 .sec_img {
   width: 50%;
+  height: 640px;
   position: relative;
 }
 
-.sec_img > img {
-  width: 440px;
-  height: 560px;
+.sec_img>img {
+  width: 400px;
+  height: 520px;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
   border: none;
   background-image: url("../img/room1.jpg");
   background-size: auto 100%;
+  opacity: 0;
 }
 
-.sec_img > img:nth-of-type(2) {
+.sec_img>img:nth-of-type(2) {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
   background-image: url("../img/room2.jpg");
 }
 
@@ -444,32 +455,60 @@ section {
   padding-left: 100px;
 }
 
-.sec_content > h3 > i {
-  font-size: 24px;
-}
-.sec_content > h3 {
-  font-family: "Raleway", sans-serif;
-  font-size: 44px;
-  margin-bottom: 20px;
-  text-align: center;
+.sec_ctn_01{
+  opacity: 0;
 }
 
-.sec_content > p {
+.sec_content>h3>i {
+  font-size: 24px;
+}
+
+.sec_content>h3 {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 36px;
+  margin-bottom: 36px;
+}
+
+.sec_content>p {
+  font-family: "Raleway", sans-serif;
   line-height: 36px;
   margin-bottom: 20px;
 }
 
 /*our rooms*/
-.sec_01:nth-of-type(2) > .sec_box {
-  transform: translateX(25%);
+.sec_02 {
+  margin-top: 200px;
+  width: 100%;
 }
 
-.sec_01:nth-of-type(2) > .sec_box > .sec_content {
-  width: 50%;
+.sec_02>h2 {
+  text-align: center;
+}
+
+.sec_box_02 {
+  width: 80%;
+  margin: 100px 0 50px 0;
+  display: flex;
+}
+
+.sec_box_02:nth-of-type(1),
+.sec_box_02:nth-of-type(3){
+  
+  float: right;
+
+}
+
+.sec_box_02>.sec_content:nth-of-type(1),
+.sec_box_02>.sec_content:nth-of-type(3) {
+  padding-left: 0;
   padding-right: 100px;
-  padding-left: 0px;
+}
+
+.sec_box_02:nth-of-type(1) h3,
+.sec_box_02:nth-of-type(1) p,
+.sec_box_02:nth-of-type(3) h3,
+.sec_box_02:nth-of-type(3) p {
+  text-align: right;
 }
 
 .sec_pic {
@@ -477,33 +516,20 @@ section {
   width: 100%;
   height: 400px;
 }
-
-.sec_pic_01 {
+.sec_img:nth-of-type(2) > .sec_pic,
+.sec_img:nth-of-type(4) > .sec_pic{
   border-radius: 300px 0 0 0;
 }
-.sec_pic_02 {
+
+.sec_box_02:nth-of-type(2) .sec_pic{
   border-radius: 0 300px 0 0;
 }
-.sec_pic_03 {
-  border-radius: 300px 0 0 0;
-}
-.sec_box:nth-of-type(4) {
-  transform: translateX(25%);
-}
 
-.sec_box:nth-of-type(4) > .sec_content > h3 {
-  text-align: initial;
-}
-.sec_box:nth-of-type(4) > .sec_content {
-  width: 50%;
-  padding-right: 100px;
-  padding-left: 0px;
-}
-.sec_01:nth-of-type(4) > .sec_box > .sec_content > h3 {
-  text-align: initial;
-}
+
+
 /*parallax*/
-.parallax{
+.parallax {
+  clear: both;
   background-image: url("../img/parallax.jpg.jpg");
   background-size: 100%;
   min-height: 300px;
@@ -511,11 +537,13 @@ section {
   height: 100px;
   background-attachment: fixed;
 }
+
 /*blog*/
-.wrapper{
+.wrapper {
   height: 500px;
   width: 100%;
 }
+
 /*footer*/
 footer {
   background: royalblue;

@@ -36,10 +36,10 @@
         <nav>
             <div class="logo">Villa Ampala</div>
             <div class="nav_menu">
-                <a href="#">About Us<div class="underline"></div></a>
-                <a href="#">Our Rooms<div class="underline"></div></a>
-                <a href="#">Blog<div class="underline"></div></a>
-                <a href="#">Contact Us<div class="underline"></div></a>
+                <a class="menu_list" href="#">About Us<div class="underline"></div></a>
+                <a class="menu_list" href="#">Our Rooms<div class="underline"></div></a>
+                <a class="menu_list" href="#">Blog<div class="underline"></div></a>
+                <a class="menu_list" href="#">Contact Us<div class="underline"></div></a>
             </div>
             <button class="hide_menu" onclick="OpenMenu()">
                 <i class="fas fa-align-justify"></i>
@@ -68,7 +68,8 @@
             </form>
         </div>
         <button class="down_btn" onclick="ScrollDown()">
-            <div><i class="fas fa-chevron-down"></i></button>
+            <div><i class="fas fa-chevron-down"></i>
+        </button>
         </div>
         <!--sns nav-->
         <div class="my_sns">
@@ -81,23 +82,24 @@
             <div><i class="fas fa-arrow-up"></i></div>
         </button>
     </header>
+    <!--section-->
     <section>
         <svg id="curve" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 163.67">
             <path class="cls-1" d="M1921,62.67s-427-141-960,0-960,0-960,0v101H1921Z" transform="translate(-1 0)" />
         </svg>
         <!--about us-->
-        <div class="sec_01 about">
-            <h2>little about us<div class="underline_01"></div>
+        <div class="sec_01">
+            <h2>little about us<div class="underline_02"></div>
             </h2>
-            <div class="info_deco info_01">
+            <div class="info">
                 <p>tel : (01) 1234 5678</p>
             </div>
             <div class="sec_box">
                 <div class="sec_img">
-                    <img>
-                    <img>
+                    <img class="about_img">
+                    <img class="about_img">
                 </div>
-                <div class="sec_content">
+                <div class="sec_content sec_ctn_01">
                     <h3><i class="fas fa-quote-left"></i>
                         for your peaceful vacations
                         <i class="fas fa-quote-right"></i>
@@ -113,60 +115,65 @@
                     </p>
                 </div>
             </div>
-            <div class="info_deco info_02">
+            <div class="info">
                 <p>info@villampala.co</p>
             </div>
         </div>
         <!--our rooms-->
-        <div class="sec_01 facil">
-            <h2>facilities<div class="underline_01"></div>
+        <div class="sec_02">
+            <h2>facilities<div class="underline_02"></div>
             </h2>
-            <div class="sec_box">
+            <div class="sec_box_02">
                 <div class="sec_content">
                     <h3>serve free breakfast</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptas inventore corporis voluptatibus, aspernatur explicabo, 
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Voluptas inventore corporis voluptatibus, aspernatur explicabo,
                         reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
-                         pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
-                          Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus 
-                          sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
+                        pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
+                        Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus
+                        sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
                     </p>
                 </div>
                 <div class="sec_img">
-                    <div class="sec_pic sec_pic_01"></div>
+                    <div class="sec_pic"></div>
+                </div>
+            </div>
+
+            <div class="sec_box_02">
+                <div class="sec_img">
+                    <div class="sec_pic"></div>
+                </div>
+                <div class="sec_content">
+                    <h3>swimming pool</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Voluptas inventore corporis voluptatibus, aspernatur explicabo,
+                        reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
+                        pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
+                        Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus
+                        sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
+                    </p>
+                </div>
+
+            </div>
+            <div class="sec_box_02">
+                <div class="sec_content">
+                    <h3>golf course</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Voluptas inventore corporis voluptatibus, aspernatur explicabo,
+                        reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
+                        pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
+                        Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus
+                        sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
+                    </p>
+                </div>
+                <div class="sec_img">
+                    <div class="sec_pic"></div>
                 </div>
             </div>
         </div>
-        <div class="sec_box">
-                <div class="sec_img"><div class="sec_pic sec_pic_02"></div></div>
-                <div class="sec_content">
-                    <h3>swimming pool</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptas inventore corporis voluptatibus, aspernatur explicabo, 
-                        reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
-                         pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
-                          Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus 
-                          sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
-                    </p>
-                </div>
-                
-            </div>
-            <div class="sec_box">
-                    <div class="sec_content">
-                        <h3>golf course</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Voluptas inventore corporis voluptatibus, aspernatur explicabo, 
-                            reiciendis eos sapiente omnis id ut vitae laudantium iure tempora
-                             pariatur quo perferendis sequi consequuntur fuga recusandae excepturi.
-                              Autem, tempora voluptatum. Consectetur, velit suscipit necessitatibus 
-                              sit rem, facilis temporibus autem veniam deserunt quas repellat nam saepe!
-                        </p>
-                    </div>
-                    <div class="sec_img"><div class="sec_pic sec_pic_03"></div></div>
-            </div>
-            <!--blog-->
-            <div class="parallax"></div>
-            <div class="wrapper"></div>
+        <!--blog-->
+        <div class="parallax"></div>
+        <div class="wrapper"></div>
     </section>
     <footer></footer>
     <!--jQuery & javascript-->
