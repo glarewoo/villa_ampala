@@ -345,6 +345,8 @@ label {
   right: 50px;
   border: none;
   background: rgba(100, 148, 237, 0.541);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   width: 80px;
   height: 80px;
   border-radius: 10px;
@@ -435,7 +437,7 @@ section {
 
 .sec_img>img {
   width: 400px;
-  height: 520px;
+  height: 500px;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
   border: none;
   background-image: url("../img/room1.jpg");
@@ -487,7 +489,7 @@ section {
 
 .sec_box_02 {
   width: 80%;
-  margin: 100px 0 50px 0;
+  margin: 100px 0 0 0;
   display: flex;
 }
 
@@ -525,23 +527,60 @@ section {
   border-radius: 0 300px 0 0;
 }
 
-
-
-/*parallax*/
-.parallax {
-  clear: both;
-  background-image: url("../img/parallax.jpg.jpg");
-  background-size: 100%;
-  min-height: 300px;
+.sec_03 {
+  margin-top: 200px;
   width: 100%;
-  height: 100px;
-  background-attachment: fixed;
+  clear: both;
 }
 
+.sec_03>h2 {
+  text-align: center;
+}
 /*blog*/
 .wrapper {
-  height: 500px;
+  margin: auto;
+  display: flex;
+  width: 80%;
+  margin-bottom: 200px;
+}
+
+.blog_box{
+  width: calc((100%/3) - 60px);
+  height: 480px;
+  margin: 0 30px 0 30px;
+  position: relative;
+  background-image: url("../img/room1.jpg");
+  background-size: auto 100%;
+  overflow: hidden;
+}
+
+.filter{
+  filter: blur(5px);
+  position: absolute;
+  bottom: 0;
+  height: 30%;
   width: 100%;
+  background-image: url("../img/room1.jpg");
+  background-size: auto 330%;
+  background-position: bottom left;
+}
+
+.blog_btn{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: rgba(100, 148, 237, 0.8);
+  color: #fff;
+}
+
+.blog_box_content{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: rgba(65, 105, 225, 0.7);
 }
 
 /*footer*/
@@ -549,3 +588,4 @@ footer {
   background: royalblue;
   height: 20vh;
 }
+
